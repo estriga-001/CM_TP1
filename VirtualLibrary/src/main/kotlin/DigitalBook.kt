@@ -9,6 +9,10 @@ class DigitalBook (
 
 ) : Book(title, author, publicationYear){
 
+    override fun getStorageInfo(): String {
+        return "Armazenado digitalmente: $fileSize MB | Formato: $format"
+    }
+
     override fun toString(): String {
         return super.toString() + " | Tamanho: $fileSize MB | Formato: $format"
     }

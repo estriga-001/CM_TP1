@@ -8,9 +8,10 @@ class Library (
 
     fun addBook(book: Book) {
         books.add(book)
+        totalBooksCreated++
     }
 
-    fun listBooks() {
+    fun showBooks() {
         if (books.isEmpty()) {
             println("Não existem livros registados!")
             return
@@ -28,12 +29,15 @@ class Library (
 
             if (book.title.equals(title, ignoreCase = true)) {
                 found = true
-                println("Livro ${book.title} encontrado com sucesso!")
 
                 if(book is PhysicalBook) {
                     if(book.availableCopies > 0) {
                         book.availableCopies--
-                        println("Livro ${book.title} emprestado com sucesso.")
+                        println("Livro '${book.title}' emprestado com sucesso. Cópias restantes: ${book.availableCopies}")
+
+                        if(book.availableCopies == 0){
+                            println("Atenção: O livro '${book.title}' está agora fora de stock.")
+                        }
                     }
                     else {
                         println("Não há cópias disponíveis do livro ${book.title}.")
@@ -64,5 +68,34 @@ class Library (
             }
         }
         println("Livro não encontrado.")
+    }
+
+    fun searchByAuthor(author: String) {
+        var found = false
+
+        println("Livros do autor '${author}:'")
+
+        for (book in books) {
+            if(book.author.equals(author, ignoreCase = true)){
+                if (book is PhysicalBook) {
+                    println("- ${book.title} (${book.getPublicationCategory()}, ${book.availableCopies} disponíveis)")
+                }
+                else {
+                    println("- ${book.title} (${book.getPublicationCategory()}, digital)")
+                }
+            }
+        }
+
+        if (!found) {
+            println("Nenhum livro de $author encontrado.")
+        }
+    }
+
+    companion object {
+        private var totalBooksCreated = 0
+
+        fun getTotalBooksCreated(): Int {
+            return totalBooksCreated
+        }
     }
 }

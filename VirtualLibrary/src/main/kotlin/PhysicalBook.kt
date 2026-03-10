@@ -14,13 +14,15 @@ class PhysicalBook (
         set (value) {
             if(value >= 0) {
                 field = value
-                if (value == 0) {
-                    println("Atenção: o livro está agora fora de stock.")
-                }
             }
         }
 
+    override fun getStorageInfo(): String {
+        val cover = if(hasHardCover) "Yes" else "No"
+        return "Livro físico: ${weight}g, Capa rija: $cover"
+    }
+
     override fun toString(): String {
-        return super.toString() + " | Cópias disponíveis: $availableCopies | Peso: $weight | Capa rija: $hasHardCover"
+        return super.toString() + " | Cópias disponíveis: $availableCopies | ${getStorageInfo()}"
     }
 }

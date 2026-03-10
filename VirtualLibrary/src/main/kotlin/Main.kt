@@ -13,8 +13,39 @@ fun main() {
         "PDF"
     )
 
+    val physicalBook = PhysicalBook (
+        "Clean code",
+        "Robert C. Martin",
+        2008,
+        3,
+        650.0,
+        true
+    )
+
+    val classicBook = PhysicalBook (
+        "1984",
+        "George Orwell",
+        1949,
+        2,
+        400.0,
+        false
+    )
     library.addBook(digitalBook)
-    library.listBooks()
-    library.borrowBook("Kotlin in action")
-    library.borrowBook("aaa")
+    library.addBook(physicalBook)
+    library.addBook(classicBook)
+
+    println("\n--- Library Catalog ---")
+    library.showBooks()
+
+    println("\n--- Borrowing Books ---")
+    library.borrowBook("Clean Code")
+    library.borrowBook("1984")
+    library.borrowBook("1984")
+    library.borrowBook("1984") // should fail
+
+    println("\n--- Returning Books ---")
+    library.returnBook("1984")
+
+    println("\n--- Search by Author ---")
+    library.searchByAuthor("George Orwell")
 }
