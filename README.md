@@ -64,6 +64,65 @@ app/
         │   └── drawable/
         │       └── smile
 
+## Main Activity
+
+A MainActivity é a atividade principal da aplicação e representa o ponto de entrada do projeto. Esta classe herda de AppCompatActivity, beneficiando das funcionalidades modernas da biblioteca AndroidX.
+
+No método onCreate, a atividade é inicializada e o layout principal é carregado com setContentView(R.layout.activity_main). Antes disso, é chamado enableEdgeToEdge(), permitindo que a aplicação utilize toda a área disponível do ecrã, incluindo as zonas próximas das barras do sistema.
+
+Além disso, é definido um listener com ViewCompat.setOnApplyWindowInsetsListener, que ajusta automaticamente o padding do contentor principal em função das barras do sistema. Isto garante que o conteúdo da interface não fica escondido pela barra de estado ou pela barra de navegação.
+
+No final do método, é feito um println com o nome local da activity seguido de onCreate, o que permite verificar no terminal ou log quando a atividade é criada.
+
+## Interface gráfica em modo vertical
+
+O ficheiro activity_main.xml, localizado na pasta layout, define a interface utilizada quando o dispositivo está em orientação vertical. O layout base escolhido foi ConstraintLayout, que permite posicionar os elementos de forma flexível através de constraints.
+
+Nesta versão da interface são apresentados quatro componentes principais: dois TextView, uma ImageView e uma CalendarView.
+
+O primeiro TextView apresenta a mensagem "Hello Android World". Este texto funciona como título principal da aplicação. Está centrado horizontalmente, utiliza uma cor roxa (purple_500), tamanho de letra de 24sp e estilo a negrito, tornando-se o elemento de maior destaque visual no topo do ecrã.
+
+O segundo TextView, colocado abaixo do primeiro, apresenta o texto "My first App". Este componente funciona como subtítulo e tem fundo laranja, o que cria contraste e dá mais identidade visual à interface.
+
+A seguir surge uma ImageView, responsável por mostrar a imagem smile. Esta imagem inclui uma contentDescription, o que melhora a acessibilidade e permite que leitores de ecrã consigam interpretar o conteúdo visual apresentado.
+
+Na parte inferior da interface encontra-se uma CalendarView, com fundo verde claro. Este componente adiciona um elemento interativo ao ecrã e demonstra a utilização de widgets nativos do Android sem necessidade de lógica adicional.
+
+## Interface gráfica em modo horizontal
+
+Para suportar a orientação horizontal, foi criado um segundo layout com o mesmo nome, activity_main.xml, mas colocado na pasta layout-land. O Android seleciona automaticamente este ficheiro quando o dispositivo está em modo paisagem.
+
+Nesta versão da interface, a disposição dos elementos é diferente da versão vertical. A ImageView passa a ocupar a zona esquerda do ecrã, estendendo-se verticalmente, enquanto os dois TextView são apresentados no lado direito.
+
+O primeiro TextView continua a apresentar o texto "Hello Android World", funcionando como título principal. Logo abaixo surge o segundo TextView, com o texto "My first App", também centrado. Nesta versão, o subtítulo apresenta um fundo cinzento claro.
+
+Ao contrário do layout vertical, o CalendarView não está presente no modo horizontal. Esta simplificação torna a interface mais equilibrada para ecrãs mais largos e menos altos, demonstrando uma preocupação com design responsivo.
+
+## Recursos de texto
+
+Todos os textos utilizados pela aplicação estão definidos em strings.xml. Esta abordagem evita escrever texto diretamente nos layouts ou no código Kotlin, promovendo melhor organização, reutilização e manutenção do projeto.
+
+As strings definidas são:
+
+    - app_name com o valor Hello World V2
+    - hello_string com o valor Hello Android World
+    - my_first_app com o valor My first App
+    - image_desc com o valor Just smile
+
+## Recuros de cor
+
+As cores utilizadas pela aplicação estão definidas em colors.xml. Entre elas encontram-se o preto, o branco, o roxo principal (purple_500) e uma cor laranja (orange).
+
+## Tema da aplicação
+
+O aspeto global da aplicação é controlado através de themes.xml. O projeto utiliza como base o tema Theme.MaterialComponents.DayNight.DarkActionBar, permitindo beneficiar do estilo Material Design e do suporte a modos claros e escuros.
+
+No tema personalizado foram definidos alguns atributos principais:
+
+    - colorPrimary como purple_500
+    - colorPrimaryVariant como black
+    - colorOnPrimary como white
+
 # Library Management System in Kotlin
 
 ## Objetivo
