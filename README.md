@@ -64,6 +64,7 @@ app/
         │   │   └── themes.xml
         │   └── drawable/
         │       └── smile
+```
 
 ## Main Activity
 
