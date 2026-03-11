@@ -17,6 +17,53 @@ Tarefa1
 ├── exer_2.kt
 └── exer_3.kt
 
+# Hello World V2
+
+## Descrição
+
+A aplicação **Hello World V2** é um projeto Android desenvolvido em **Kotlin** com o objetivo de explorar a estrutura base de uma aplicação nativa, a utilização de layouts em XML e a adaptação da interface a diferentes orientações do dispositivo. Apesar de simples, a app já demonstra vários conceitos importantes do desenvolvimento Android, como o ciclo de vida de uma `Activity`, o uso de `ConstraintLayout`, a organização de recursos em ficheiros próprios e a criação de interfaces responsivas para modo vertical e horizontal.
+
+O projeto apresenta um ecrã principal com uma mensagem de boas-vindas, um subtítulo, uma imagem e, no modo vertical, um calendário. Para além disso, utiliza temas e cores personalizados, bem como strings centralizadas em ficheiros de recursos, seguindo as boas práticas do ecossistema Android.
+
+---
+
+## Objetivo
+
+O principal objetivo desta aplicação é servir como introdução prática ao desenvolvimento Android em Kotlin. Através dela, é possível compreender como se organiza uma aplicação Android, como se define a interface gráfica com XML e como se ligam os recursos visuais ao código Kotlin de uma `Activity`.
+
+Ao mesmo tempo, o projeto permite praticar conceitos como:
+
+- criação de uma `Activity`
+- utilização de layouts XML
+- posicionamento de componentes com `ConstraintLayout`
+- separação de recursos em `strings.xml`, `colors.xml` e `themes.xml`
+- adaptação da interface a diferentes orientações do ecrã
+- utilização de componentes gráficos básicos como `TextView`, `ImageView` e `CalendarView`
+
+---
+
+## Estrutura principal da aplicação
+
+A aplicação é composta por vários ficheiros responsáveis por diferentes partes do projeto:
+
+```text
+app/
+└── src/
+    └── main/
+        ├── java/cm_a15044/helloworld/
+        │   └── MainActivity.kt
+        ├── res/
+        │   ├── layout/
+        │   │   └── activity_main.xml
+        │   ├── layout-land/
+        │   │   └── activity_main.xml
+        │   ├── values/
+        │   │   ├── strings.xml
+        │   │   ├── colors.xml
+        │   │   └── themes.xml
+        │   └── drawable/
+        │       └── smile
+
 # Library Management System in Kotlin
 
 ## Objetivo
@@ -34,9 +81,9 @@ Este programa foi desenvolvido para praticar conceitos fundamentais de **Program
 
 ---
 
-## Estrutura do Projeto
+# Virtual Library
 
-O projeto está dividido nas seguintes classes:
+A tarefa está dividido nas seguintes classes:
 
 ### `Book.kt`
 Classe abstrata que representa um livro genérico.
