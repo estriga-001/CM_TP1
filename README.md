@@ -1,5 +1,3 @@
----
-
 # Computação Móvel - 15044
 
 ## Índice
