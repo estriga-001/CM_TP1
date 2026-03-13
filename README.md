@@ -1,202 +1,127 @@
-# Computação Móvel - 15044
+# Computação Móvel - Assignments
 
-## Índice
+Este repositório reúne todos os trabalhos práticos (Assignments) desenvolvidos no âmbito da unidade curricular de **Computação Móvel**. 
+A estrutura está concebida para integrar múltiplos Assignments (**A1**, **A2**, ..., **An**), facilitando a navegação e a consulta rápida da documentação, código e configuração para cada projeto e/ou tarefa.
 
-* [Assignment 1 - Kotlin](https://www.google.com/search?q=%23assignment-1---kotlin)
-* [Tarefa 1 – Kotlin Tutorial Exercises](https://www.google.com/search?q=%23tarefa-1--kotlin-tutorial-exercises)
-* [Hello World V2](https://www.google.com/search?q=%23hello-world-v2)
-* [Library Management System in Kotlin](https://www.google.com/search?q=%23library-management-system-in-kotlin)
-* [Hello World Optional](https://www.google.com/search?q=%23hello-world-optional)
+## 📌 Índice de Assignments
 
-
+* [Assignment 1 (A1)](#assignment-1-a1)
+<!-- Quando houver um A2, basta descomentar e adaptar: -->
+<!-- * [Assignment 2 (A2)](#assignment-2-a2) -->
 
 ---
 
-## Assignment 1 - Kotlin
+## Assignment 1 (A1)
 
-Este bloco reúne os primeiros projetos desenvolvidos na unidade curricular, com foco na aprendizagem da linguagem Kotlin e nos fundamentos do desenvolvimento nativo para Android.
+Este primeiro bloco de trabalhos foca-se na introdução e consolidação da linguagem **Kotlin**, bem como na aprendizagem dos fundamentos de desenvolvimento nativo para **Android**.
 
-### Tarefa 1 – Kotlin Tutorial Exercises
+### Índice de Tarefas (A1)
+1. [Tarefa 1 – Kotlin Tutorial Exercises](#1-tarefa-1--kotlin-tutorial-exercises)
+2. [Hello World V2](#2-hello-world-v2)
+3. [Library Management System (Virtual Library)](#3-library-management-system-virtual-library)
+4. [Hello World Optional](#4-hello-world-optional)
+5. [City Mood Scanner](#5-city-mood-scanner)
 
-Este exercício reúne a resolução de três exercícios desenvolvidos em **Kotlin**, com base no enunciado do **Tutorial 1** da unidade curricular. A tarefa foi pensada para consolidar os primeiros conceitos da linguagem, explorando diferentes formas de resolver problemas simples com recurso a estruturas próprias de Kotlin, como arrays, ranges, funções de ordem superior, geração de sequências e tratamento de exceções.
+---
 
-Ao longo dos três exercícios, o projeto demonstra uma abordagem progressiva à aprendizagem da linguagem. O primeiro exercício foca-se na criação e manipulação de coleções numéricas, o segundo introduz interação com o utilizador e controlo de erros através de uma calculadora em linha de comandos, e o terceiro explora a geração de sequências matemáticas com base numa regra de recorrência.
+### 1. Tarefa 1 – Kotlin Tutorial Exercises
 
-#### Estrutura da tarefa
+**Explicação do Código:**  
+A `Tarefa1` agrupa a resolução de 3 exercícios concebidos para introduzir diferentes conceitos-chave de Kotlin:
+- **Exer 1:** Centra-se em coleções. Demonstra diferentes formas de inicializar e popular arrays gerando quadrados (de 1^2 até 50^2) com a utilização de lambdas nos construtores `IntArray`, `Array` e as funções `range` em conjunção com `.map()`.
+- **Exer 2:** Consiste no desenvolvimento de uma calculadora em Consola. O código utiliza leitura síncrona com `readln()`, valida e processa entradas utilizando de forma expressiva expressões `when`. Trata eventuais problemas através de blocos `try-catch`, isolando exceções como a divisão por zero (`ArithmeticException`) e introduções inválidas (`IllegalArgumentException`).
+- **Exer 3:** Trabalha com progressões. Utiliza a função `generateSequence` para emular os ressaltos de um objeto (que perde 40% da altura em cada salto), ilustrando o uso do paradigma funcional com `takeWhile`, `take` e `map`.
 
-A tarefa está organizada em três ficheiros Kotlin independentes, cada um correspondente a um exercício específico:
-
+**Estrutura de Ficheiros:**
 ```text
-
+A1/Tarefa1/
+└── src/main/kotlin/cm/
+    ├── exer_1/exer_1.kt
+    ├── exer_2/exer_2.kt
+    └── exer_3/exer_3.kt
 ```
 
-Tarefa1
-│
-├── exer_1.kt
-├── exer_2.kt
-└── exer_3.kt
-
 ---
 
-### Hello World V2
+### 2. Hello World V2
 
-#### Descrição
+**Explicação do Código:**  
+A `Hello World V2` é uma aplicação Android simples, desenvolvida para demonstrar diferentes conceitos fundamentais e o ciclo de vida da `Activity`.
+Na lógica contida na `MainActivity`, o código recorre à biblioteca AndroidX integrando o `enableEdgeToEdge()` e gerindo um `WindowInsetsListener` para adaptar o ecrã permitindo ocultar a system bar, de modo a aproveitar o espaço de "edge a edge". 
+No que diz respeito à componente visual gerida em UI/XML, usa centralização de textos (`strings.xml`), estilos e cores predefinidas (`colors.xml`), dispondo Views elementares (tais como `TextView`, `CalendarView` e `ImageView`) dentro de um `ConstraintLayout`. Além disso, possui lógica de resposta a orientações diversificadas possuindo layouts quer para retrato, quer para paisagem (`layout-land`).
 
-A aplicação **Hello World V2** é um projeto Android desenvolvido em **Kotlin** com o objetivo de explorar a estrutura base de uma aplicação nativa, a utilização de layouts em XML e a adaptação da interface a diferentes orientações do dispositivo. Apesar de simples, a app já demonstra vários conceitos importantes do desenvolvimento Android, como o ciclo de vida de uma Activity, o uso de `ConstraintLayout`, a organização de recursos em ficheiros próprios e a criação de interfaces responsivas para modo vertical e horizontal.
-
-O projeto apresenta um ecrã principal com uma mensagem de boas-vindas, um subtítulo, uma imagem e, no modo vertical, um calendário. Para além disso, utiliza temas e cores personalizados, bem como strings centralizadas em ficheiros de recursos, seguindo as boas práticas do ecossistema Android.
-
-#### Objetivo
-
-O principal objetivo desta aplicação é servir como introdução prática ao desenvolvimento Android em Kotlin. Através dela, é possível compreender como se organiza uma aplicação Android, como se define a interface gráfica com XML e como se ligam os recursos visuais ao código Kotlin de uma `Activity`.
-
-O projeto permite praticar conceitos como:
-
-* Criação de uma `Activity`
-* Utilização de layouts XML
-* Posicionamento de componentes com `ConstraintLayout`
-* Separação de recursos em `strings.xml`, `colors.xml` e `themes.xml`
-* Adaptação da interface a diferentes orientações do ecrã
-* Utilização de componentes gráficos básicos como `TextView`, `ImageView` e `CalendarView`
-
-#### Estrutura principal da aplicação
-
-A aplicação é composta por vários ficheiros responsáveis por diferentes partes do projeto:
-
+**Estrutura de Ficheiros:**
 ```text
-
+A1/CM/
+├── app/src/main/
+│   ├── java/cm_a15044/helloworld/
+│   │   └── MainActivity.kt
+│   └── res/
+│       ├── layout/activity_main.xml         (Design vertical)
+│       ├── layout-land/activity_main.xml    (Design horizontal)
+│       ├── values/strings.xml, colors.xml, themes.xml
+│       └── drawable/smile.png
 ```
 
-app/
-└── src/
-└── main/
-├── java/cm_a15044/helloworld/
-│   └── MainActivity.kt
-├── res/
-│   ├── layout/
-│   │   └── activity_main.xml
-│   ├── layout-land/
-│   │   └── activity_main.xml
-│   ├── values/
-│   │   ├── strings.xml
-│   │   ├── colors.xml
-│   │   └── themes.xml
-│   └── drawable/
-│       └── smile
-
-#### Main Activity
-
-A `MainActivity` é a atividade principal da aplicação e representa o ponto de entrada do projeto. Esta classe herda de `AppCompatActivity`, beneficiando das funcionalidades modernas da biblioteca AndroidX.
-
-No método `onCreate`, a atividade é inicializada e o layout principal é carregado com `setContentView(R.layout.activity_main)`. Antes disso, é chamado `enableEdgeToEdge()`, permitindo que a aplicação utilize toda a área disponível do ecrã, incluindo as zonas próximas das barras do sistema. Além disso, é definido um listener com `ViewCompat.setOnApplyWindowInsetsListener`, que ajusta automaticamente o padding do contentor principal em função das barras do sistema.
-
-#### Interface gráfica em modo vertical
-
-O ficheiro `activity_main.xml`, localizado na pasta `layout`, define a interface utilizada quando o dispositivo está em orientação vertical. O layout base escolhido foi `ConstraintLayout`. São apresentados quatro componentes principais: dois `TextView`, uma `ImageView` e uma `CalendarView`. O primeiro `TextView` funciona como título principal da aplicação, seguido de um subtítulo. Abaixo surge uma `ImageView` e, na parte inferior, uma `CalendarView` que adiciona um elemento interativo ao ecrã.
-
-#### Interface gráfica em modo horizontal
-
-Para suportar a orientação horizontal, foi criado um segundo layout com o mesmo nome na pasta `layout-land`. Nesta versão, a disposição dos elementos é diferente: a `ImageView` passa a ocupar a zona esquerda do ecrã, enquanto os dois `TextView` são apresentados no lado direito. O `CalendarView` não está presente no modo horizontal para manter a interface equilibrada, demonstrando uma preocupação com design responsivo.
-
-#### Recursos (Texto, Cor e Tema)
-
-* **Texto:** Todos os textos estão definidos em `strings.xml` (ex: `app_name`, `hello_string`, `my_first_app`, `image_desc`).
-* **Cor:** As cores estão definidas em `colors.xml`, incluindo o roxo principal (`purple_500`) e um tom laranja.
-* **Tema:** O aspeto global é controlado através de `themes.xml`, utilizando como base o tema `Theme.MaterialComponents.DayNight.DarkActionBar`.
-
 ---
 
-### Library Management System in Kotlin
+### 3. Library Management System (Virtual Library)
 
-#### Objetivo
+**Explicação do Código:**  
+Este projeto serve como exercício prático nos principais pilares de *Programação Orientada a Objetos* (POO) em Kotlin, onde se simula a gestão de uma biblioteca.
+A classe abstrata fundamental `Book` agrega lógica intemporal (como métodos referentes ao ano de publicação e a própria descrição). Através de conceitos de *Inheritance* (herança), a classe divide-se especificamente para dois contextos:
+- **PhysicalBook:** Subclasse que aborda questões como número de cópias físicas (que são atualizadas sempre que existe um empréstimo ou devolução), capa rija e peso em kg.
+- **DigitalBook:** Subclasse que define características mais próprias deste meio digital como tamanho em MB e as extensões (PDFs e etc.).
+A `Library` atua como agregador global e dispõe ainda de um `companion object` útil para o tracking geral de objetos alocados. Por fim, utilizam-se  `data class` na estruturação e agregação de dados relativos aos diferentes Sócios (`LibraryMember`).
 
-Este programa foi desenvolvido para praticar conceitos fundamentais de **Programação Orientada a Objetos (POO)** em Kotlin, incluindo:
-
-* Classes e objetos
-* Herança e classes abstratas
-* `data class` e `companion object`
-* Encapsulamento e polimorfismo
-* Sobrescrita de métodos (`override`)
-
-#### Estrutura do Projeto (Virtual Library)
-
-O projeto está dividido nas seguintes classes principais:
-
-* **Book.kt**: Classe abstrata que representa um livro genérico.
-* *Atributos:* `title`, `author`, `publicationYear`.
-* *Métodos:* `getPublicationCategory()` (Clássico, Moderno, Contemporâneo), `getStorageInfo()` (abstrato) e `toString()`.
-
-
-* **PhysicalBook.kt**: Herda de `Book` e representa um livro físico. Adiciona controlo de cópias disponíveis, peso e indicação de capa rija.
-* **DigitalBook.kt**: Herda de `Book` e representa um livro digital. Guarda o tamanho do ficheiro e o formato (ex: PDF).
-* **Library.kt**: Classe principal responsável por gerir a biblioteca. Permite adicionar, emprestar, devolver e pesquisar livros. Possui um `companion object` com o contador global `getTotalBooksCreated()`.
-* **LibraryMember.kt**: `data class` que representa um membro da biblioteca (preparada para futura integração de empréstimos).
-* **Main.kt**: Ficheiro principal onde o programa é executado e testado.
-
-#### Funcionalidades Implementadas
-
-* Registo de livros físicos e digitais.
-* Classificação automática por época de publicação.
-* Listagem de catálogo.
-* Empréstimo e devolução de livros físicos com verificação de stock.
-* Pesquisa de livros por autor.
-
----
-
-### Hello World Optional
-
-#### Descrição
-
-A aplicação **Hello World Optional** é um projeto Android desenvolvido em **Kotlin** com o objetivo de apresentar informações detalhadas sobre o dispositivo onde a aplicação está a ser executada. Recolhe dados do sistema através da classe `Build` e apresenta-os no ecrã de forma organizada e legível. Demonstra boas práticas como o uso de `ConstraintLayout`, `ScrollView` e o ajuste automático do conteúdo às barras do sistema.
-
-#### Objetivo
-
-Explorar a recolha e apresentação de informações do dispositivo nativo em Android, praticando conceitos como:
-
-* Criação de uma `Activity` em Kotlin
-* Acesso a propriedades do sistema através da classe `Build`
-* Apresentação dinâmica de texto num `TextView`
-* Organização da interface com `ScrollView` e `WindowInsets`
-
-#### Estrutura da tarefa
-
+**Estrutura de Ficheiros:**
 ```text
-
+A1/VirtualLibrary/
+└── src/main/kotlin/
+    ├── Book.kt
+    ├── DigitalBook.kt
+    ├── PhysicalBook.kt
+    ├── Library.kt
+    ├── LibraryMember.kt
+    └── Main.kt
 ```
 
-app/
-└── src/
-└── main/
-├── java/com/example/helloworldoptional/
-│   └── MainActivity.kt
-├── res/
-│   ├── layout/
-│   │   └── activity_main.xml
-│   └── values/
-│       └── strings.xml
+---
 
-#### MainActivity
+### 4. Hello World Optional
 
-A `MainActivity` herda de `AppCompatActivity`. No `onCreate`, carrega o layout principal, obtém a referência para o `TextView` identificado como `deviceInfo` e constrói uma string multilinha com os dados recolhidos através da classe `Build` e `Build.VERSION`. É também configurado um listener (`ViewCompat.setOnApplyWindowInsetsListener`) para garantir que o conteúdo não fica escondido atrás das barras do sistema.
+**Explicação do Código:**  
+Esta aplicação Android foca-se na obtenção programática de metadados inerentes ao dispositivo onde se encontra atualmente escalada, utilizando as diversas flags expostas pela API `Build` do Android.
+Na `MainActivity`, todo o processo de levantamento deste perfil (propriedades `Build.BRAND`, `Build.MODEL`, `Build.VERSION.RELEASE`, `Build.VERSION.SDK_INT`, etc.) ocorre no ciclo `onCreate`, compondo depois progressivamente toda a estrutura numa só variável iterável. Para possibilitar ao utilizador acesso universal a toda essa grande listagem concatenada, no Layout XML injeta-se e insere-se um `TextView` no interior de um `ScrollView`. O ajuste ao layout com o `ViewCompat` garante que a informação nunca colpare ou invada "safe zones".
 
-#### Informação apresentada sobre o dispositivo
-
-Os dados são obtidos diretamente através da API do sistema e incluem:
-
-* **Manufacturer** – fabricante do dispositivo
-* **Model** – modelo do equipamento
-* **Brand** – marca comercial
-* **Type** – tipo de build do sistema
-* **User** – utilizador associado à compilação do sistema
-* **Base** – sistema operativo base
-* **Incremental** – versão incremental da build
-* **SDK** – nível de API do Android
-* **Version Code** – versão do Android em formato legível
-* **Display** – identificador da build instalada
-
-#### Interface Gráfica e Organização
-
-A interface foi concebida para ser simples e legível. Um cabeçalho no topo identifica a finalidade da aplicação, enquanto um `ScrollView` garante que toda a informação pode ser consultada mesmo em ecrãs mais pequenos. Dentro do `ScrollView`, um `LinearLayout` organiza verticalmente os elementos, sendo a escolha ideal para priorizar a clareza da apresentação desta listagem dinâmica de dados.
+**Estrutura de Ficheiros:**
+```text
+A1/helloWorldOptional/
+├── app/src/main/
+│   ├── java/com/example/helloworldoptional/
+│   │   └── MainActivity.kt
+│   └── res/
+│       ├── layout/activity_main.xml
+│       └── values/strings.xml
+```
 
 ---
 
+### 5. City Mood Scanner
+
+**Explicação do Código:**  
+Este é um projeto avançado no âmbito de A1 que se foca em demonstrar o potencial da stack de aplicações Kotlin contemporâneo (Android). O sistema arquitetura-se maioritariamente num padrão *MVVM (Model-View-ViewModel)*.
+A `MainActivity` funciona em estrita ligação com o ViewModel (`MapViewModel`), processando intenções através de repositórios como o `EnvironmentRepository` para coordenar acessos sem expor a interface local aos pedidos. Utiliza o `Retrofit` (configurado em `RetrofitClient`) para invocar APIs Web e solicitar dados sobre poluição, geolocalização exata, clima e ruído do respetivo local. As entidades obtidas nos endpoints REST são seguidamente refletidas para Data Classes concretas adaptadas a estas APIs (como `AirQualityResponse`, `WeatherResponse`, etc.).
+
+**Estrutura de Ficheiros:**
+```text
+A1/CityMoodScanner/
+├── app/src/main/
+│   ├── java/com/example/citymoodscanner/
+│   │   ├── MainActivity.kt
+│   │   ├── ui/MapViewModel.kt, UiState.kt
+│   │   ├── data/
+│   │   │   ├── model/ (ex: AirQualityResponse.kt, EnvironmentData.kt...)
+│   │   │   ├── remote/ (ApiServices.kt, RetrofitClient.kt)
+│   │   │   └── repository/EnvironmentRepository.kt
+```
