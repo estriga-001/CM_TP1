@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">City Mood Scanner</string>
+
+    <!-- Bottom Sheet -->
+    <string name="loading_data">Scanning city mood…</string>
+    <string name="retry">Retry</string>
+    <string name="temperature">Temperature</string>
+    <string name="air_quality">Air Quality</string>
+    <string name="noise_level">Noise Level</string>
+    <string name="conditions">General Conditions</string>
+    <string name="wind">Wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="feels_like">Feels like</string>
+    <string name="mood_format">Mood: %s</string>
+    <string name="temp_format">%1$.0f°C</string>
+    <string name="wind_format">%1$.1f m/s</string>
+    <string name="humidity_format">%1$d%%</string>
+    <string name="pressure_format">%1$d hPa</string>
+    <string name="noise_format">%1$d dB</string>
+    <string name="pm_details_format">PM2.5: %1$.1f · PM10: %2$.1f</string>
+    <string name="noise_detail_format">Estimated · %s</string>
+    <string name="tap_to_scan">Tap any location to scan its mood</string>
+
+    <!-- Permissions -->
+    <string name="location_permission_rationale">Location permission lets us show your position on the map.</string>
+</resources>

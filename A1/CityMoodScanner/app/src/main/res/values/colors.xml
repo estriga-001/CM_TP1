@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 palette — Teal / Deep Purple accent -->
+    <color name="md_theme_primary">#FF006A6A</color>
+    <color name="md_theme_onPrimary">#FFFFFFFF</color>
+    <color name="md_theme_primaryContainer">#FF9CF1F0</color>
+    <color name="md_theme_onPrimaryContainer">#FF002020</color>
+
+    <color name="md_theme_secondary">#FF4A6363</color>
+    <color name="md_theme_onSecondary">#FFFFFFFF</color>
+    <color name="md_theme_secondaryContainer">#FFCCE8E7</color>
+    <color name="md_theme_onSecondaryContainer">#FF051F1F</color>
+
+    <color name="md_theme_tertiary">#FF4B607C</color>
+    <color name="md_theme_onTertiary">#FFFFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#FFD3E3FF</color>
+    <color name="md_theme_onTertiaryContainer">#FF041C35</color>
+
+    <color name="md_theme_error">#FFBA1A1A</color>
+    <color name="md_theme_onError">#FFFFFFFF</color>
+
+    <color name="md_theme_background">#FFFAFDFB</color>
+    <color name="md_theme_onBackground">#FF191C1C</color>
+    <color name="md_theme_surface">#FFFAFDFB</color>
+    <color name="md_theme_onSurface">#FF191C1C</color>
+    <color name="md_theme_surfaceVariant">#FFDAE5E4</color>
+    <color name="md_theme_onSurfaceVariant">#FF3F4948</color>
+
+    <!-- Dark theme -->
+    <color name="md_theme_dark_primary">#FF80D5D4</color>
+    <color name="md_theme_dark_onPrimary">#FF003737</color>
+    <color name="md_theme_dark_primaryContainer">#FF004F4F</color>
+    <color name="md_theme_dark_onPrimaryContainer">#FF9CF1F0</color>
+
+    <color name="md_theme_dark_secondary">#FFB0CCCB</color>
+    <color name="md_theme_dark_onSecondary">#FF1C3434</color>
+    <color name="md_theme_dark_secondaryContainer">#FF334B4B</color>
+    <color name="md_theme_dark_onSecondaryContainer">#FFCCE8E7</color>
+
+    <color name="md_theme_dark_tertiary">#FFB3C8E8</color>
+    <color name="md_theme_dark_onTertiary">#FF1D314B</color>
+    <color name="md_theme_dark_tertiaryContainer">#FF344863</color>
+    <color name="md_theme_dark_onTertiaryContainer">#FFD3E3FF</color>
+
+    <color name="md_theme_dark_error">#FFFFB4AB</color>
+    <color name="md_theme_dark_onError">#FF690005</color>
+
+    <color name="md_theme_dark_background">#FF191C1C</color>
+    <color name="md_theme_dark_onBackground">#FFE0E3E2</color>
+    <color name="md_theme_dark_surface">#FF191C1C</color>
+    <color name="md_theme_dark_onSurface">#FFE0E3E2</color>
+    <color name="md_theme_dark_surfaceVariant">#FF3F4948</color>
+    <color name="md_theme_dark_onSurfaceVariant">#FFBEC9C8</color>
+
+    <!-- Legacy -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
